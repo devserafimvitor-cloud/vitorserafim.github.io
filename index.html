@@ -13,18 +13,28 @@ body {
     color: #e2e8f0;
 }
 
+/* HEADER */
 header {
     padding: 60px 20px;
     text-align: center;
     background: radial-gradient(circle at top, #1e3a8a, #020617);
 }
 
-select {
-    margin-top: 10px;
-    padding: 5px;
-    border-radius: 5px;
+.lang-box {
+    margin-top: 15px;
 }
 
+select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #020617;
+    color: #fff;
+    border: 1px solid #3b82f6;
+    cursor: pointer;
+}
+
+/* CONTAINER */
 .container {
     max-width: 1100px;
     margin: auto;
@@ -37,35 +47,69 @@ select {
     gap: 20px;
 }
 
+/* CARDS */
 .card {
     background: #020617;
     border: 1px solid #1e293b;
     border-radius: 12px;
     padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #3b82f6;
+    transform: translateY(-4px);
 }
 
 h2 {
     color: #3b82f6;
 }
 
-.project p {
-    color: #94a3b8;
-}
-
+/* BOTÃO */
 .btn {
     display: inline-block;
     margin-top: 15px;
-    padding: 10px 18px;
+    padding: 12px 20px;
     background: #3b82f6;
     color: white;
     border-radius: 6px;
     text-decoration: none;
+    font-weight: bold;
 }
 
+.btn:hover {
+    background: #2563eb;
+}
+
+/* CONTATO */
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-buttons a {
+    padding: 12px;
+    background: #020617;
+    border: 1px solid #3b82f6;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #3b82f6;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.contact-buttons a:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 30px;
     background: #020617;
+    color: #64748b;
 }
 </style>
 </head>
@@ -76,59 +120,54 @@ footer {
     <h1 id="titulo">Vitor Serafim</h1>
     <p id="subtitulo">Desenvolvedor C# | .NET | Backend</p>
 
-    <select onchange="trocarIdioma(this.value)">
-        <option value="pt">Português</option>
-        <option value="en">English</option>
-        <option value="es">Español</option>
-    </select>
+    <div class="lang-box">
+        <select onchange="trocarIdioma(this.value)">
+            <option value="pt">🇧🇷 Português</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="es">🇪🇸 Español</option>
+        </select>
+    </div>
 </header>
 
 <div class="container">
 
     <div class="grid">
+
         <div class="card">
-            <h2 id="bioTitulo">Biografia</h2>
+            <h2 id="bioTitulo"></h2>
             <p id="bioTexto"></p>
         </div>
 
         <div class="card">
-            <h2 id="objTitulo">Objetivos</h2>
+            <h2 id="objTitulo"></h2>
             <p id="objTexto"></p>
         </div>
+
     </div>
 
     <div class="card">
-        <h2 id="projTitulo">Projetos</h2>
+        <h2 id="projTitulo"></h2>
 
-        <div class="project">
-            <strong id="p1titulo"></strong>
-            <p id="p1texto"></p>
-        </div>
+        <p><strong id="p1titulo"></strong></p>
+        <p id="p1texto"></p>
 
-        <div class="project">
-            <strong id="p2titulo"></strong>
-            <p id="p2texto"></p>
-        </div>
+        <p><strong id="p2titulo"></strong></p>
+        <p id="p2texto"></p>
 
-        <div class="project">
-            <strong id="p3titulo"></strong>
-            <p id="p3texto"></p>
-        </div>
+        <p><strong id="p3titulo"></strong></p>
+        <p id="p3texto"></p>
 
         <a class="btn" id="btnGithub" href="https://github.com/devserafimvitor-cloud/Tarefa-fora-da-aula" target="_blank"></a>
     </div>
 
     <div class="card">
-        <h2 id="contatoTitulo">Contato</h2>
+        <h2 id="contatoTitulo"></h2>
 
-        <p>📱 WhatsApp: 
-        <a href="https://wa.me/5565992998850" target="_blank">WhatsApp</a></p>
-
-        <p>📧 Email: 
-        <a href="mailto:devserafimvitor@gmail.com">Email</a></p>
-
-        <p>📸 Instagram: 
-        <a href="https://instagram.com/vitorserafim27" target="_blank">Instagram</a></p>
+        <div class="contact-buttons">
+            <a href="https://wa.me/5565992998850" target="_blank">📱 WhatsApp</a>
+            <a href="mailto:devserafimvitor@gmail.com">📧 Email</a>
+            <a href="https://instagram.com/vitorserafim27" target="_blank">📸 Instagram</a>
+        </div>
     </div>
 
 </div>
@@ -141,53 +180,55 @@ footer {
 function trocarIdioma(idioma) {
 
 const textos = {
+
 pt: {
 bioTitulo: "Biografia",
-bioTexto: "Desenvolvedor focado em C# e .NET, com experiência em criação de aplicações com validação de dados e estrutura organizada.",
+bioTexto: "Desenvolvedor especializado em C# e .NET, com foco na construção de aplicações estruturadas, validação de dados e implementação de soluções eficientes. Experiência no desenvolvimento de sistemas organizados, com atenção à qualidade do código, segurança e consistência das informações.",
 objTitulo: "Objetivos",
-objTexto: "Evoluir continuamente como desenvolvedor e atuar profissionalmente na área de tecnologia.",
+objTexto: "Atuar profissionalmente como desenvolvedor, contribuindo com soluções robustas e evoluindo continuamente em tecnologias backend e desenvolvimento full stack.",
 projTitulo: "Projetos",
 p1titulo: "✈️ Sistema de Controle de Voo",
-p1texto: "Simulação de controle de aeronaves com análise de dados e decisões automáticas.",
+p1texto: "Aplicação que simula o controle de aeronaves com análise de variáveis críticas e decisões automatizadas.",
 p2titulo: "📊 Sistema de Avaliação de Alunos",
-p2texto: "Sistema com validação de notas, cálculo de média e classificação.",
+p2texto: "Sistema completo com validação de dados, cálculo de média e classificação automática.",
 p3titulo: "🧾 Sistema de Classificação por Idade",
-p3texto: "Classificação de usuários baseada em idade.",
+p3texto: "Aplicação que define permissões com base na idade do usuário.",
 btnGithub: "Ver projetos no GitHub",
 contatoTitulo: "Contato"
 },
 
 en: {
 bioTitulo: "Biography",
-bioTexto: "Developer focused on C# and .NET, building applications with data validation and structured logic.",
+bioTexto: "Developer specialized in C# and .NET, focused on building structured applications, data validation, and efficient solutions. Experience in developing organized systems with attention to code quality, security, and consistency.",
 objTitulo: "Goals",
-objTexto: "Continuously grow as a developer and work professionally in technology.",
+objTexto: "Work professionally as a developer, contributing with robust solutions and continuously evolving in backend and full stack technologies.",
 projTitulo: "Projects",
 p1titulo: "✈️ Flight Control System",
-p1texto: "Aircraft control simulation using data analysis and automated decisions.",
+p1texto: "Application that simulates aircraft control with automated decision-making.",
 p2titulo: "📊 Student Evaluation System",
-p2texto: "System with input validation, average calculation and classification.",
+p2texto: "System with data validation, average calculation and classification.",
 p3titulo: "🧾 Age Classification System",
-p3texto: "User classification based on age.",
+p3texto: "Application that defines permissions based on age.",
 btnGithub: "View projects on GitHub",
 contatoTitulo: "Contact"
 },
 
 es: {
 bioTitulo: "Biografía",
-bioTexto: "Desarrollador enfocado en C# y .NET, creando aplicaciones con validación de datos y lógica estructurada.",
+bioTexto: "Desarrollador especializado en C# y .NET, enfocado en la construcción de aplicaciones estructuradas, validación de datos y soluciones eficientes.",
 objTitulo: "Objetivos",
-objTexto: "Evolucionar como desarrollador y trabajar profesionalmente en tecnología.",
+objTexto: "Actuar profesionalmente como desarrollador y evolucionar continuamente.",
 projTitulo: "Proyectos",
 p1titulo: "✈️ Sistema de Control de Vuelo",
 p1texto: "Simulación de control de aeronaves con decisiones automáticas.",
 p2titulo: "📊 Sistema de Evaluación de Alumnos",
-p2texto: "Sistema con validación de datos y cálculo de promedio.",
+p2texto: "Sistema con validación y cálculo de promedio.",
 p3titulo: "🧾 Sistema de Clasificación por Edad",
-p3texto: "Clasificación de usuarios basada en edad.",
+p3texto: "Clasificación basada en edad.",
 btnGithub: "Ver proyectos en GitHub",
 contatoTitulo: "Contacto"
 }
+
 };
 
 const t = textos[idioma];
@@ -197,7 +238,6 @@ for (let key in t) {
 }
 }
 
-// inicia em português
 trocarIdioma("pt");
 </script>
 
