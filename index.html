@@ -14,17 +14,15 @@ body {
 }
 
 header {
-    padding: 80px 20px;
+    padding: 60px 20px;
     text-align: center;
     background: radial-gradient(circle at top, #1e3a8a, #020617);
 }
 
-header h1 {
-    font-size: 48px;
-}
-
-header p {
-    color: #94a3b8;
+select {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .container {
@@ -44,21 +42,10 @@ header p {
     border: 1px solid #1e293b;
     border-radius: 12px;
     padding: 25px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    border-color: #3b82f6;
-    transform: translateY(-4px);
 }
 
 h2 {
-    margin-bottom: 10px;
     color: #3b82f6;
-}
-
-.project {
-    margin-top: 15px;
 }
 
 .project p {
@@ -75,18 +62,10 @@ h2 {
     text-decoration: none;
 }
 
-.contact a {
-    display: block;
-    margin: 8px 0;
-    color: #3b82f6;
-    text-decoration: none;
-}
-
 footer {
     text-align: center;
     padding: 30px;
     background: #020617;
-    color: #64748b;
 }
 </style>
 </head>
@@ -94,79 +73,133 @@ footer {
 <body>
 
 <header>
-    <h1>Vitor Serafim</h1>
-    <p>Desenvolvedor C# | .NET | Backend</p>
+    <h1 id="titulo">Vitor Serafim</h1>
+    <p id="subtitulo">Desenvolvedor C# | .NET | Backend</p>
+
+    <select onchange="trocarIdioma(this.value)">
+        <option value="pt">Português</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+    </select>
 </header>
 
 <div class="container">
 
     <div class="grid">
-
         <div class="card">
-            <h2>👨‍💻 Biografia</h2>
-            <p>
-                Desenvolvedor focado em C# e .NET, com experiência na construção de
-                aplicações estruturadas, validação de dados e controle de entrada do usuário.
-                Atua no desenvolvimento de sistemas organizados, com foco em clareza,
-                funcionamento e boas práticas de programação.
-            </p>
+            <h2 id="bioTitulo">Biografia</h2>
+            <p id="bioTexto"></p>
         </div>
 
         <div class="card">
-            <h2>🎯 Objetivos</h2>
-            <p>
-                Busco evoluir continuamente como desenvolvedor, aprofundando meus conhecimentos
-                em backend, estrutura de sistemas e desenvolvimento full stack. Meu objetivo é
-                atuar profissionalmente na área de tecnologia, contribuindo com soluções
-                eficientes e bem estruturadas.
-            </p>
+            <h2 id="objTitulo">Objetivos</h2>
+            <p id="objTexto"></p>
         </div>
-
     </div>
 
     <div class="card">
-        <h2>🚀 Projetos</h2>
+        <h2 id="projTitulo">Projetos</h2>
 
         <div class="project">
-            <strong>✈️ Sistema de Controle de Voo</strong>
-            <p>
-                Simulação de controle de aeronaves baseada em análise de dados como
-                altitude e velocidade, aplicando decisões automáticas.
-            </p>
+            <strong id="p1titulo"></strong>
+            <p id="p1texto"></p>
         </div>
 
         <div class="project">
-            <strong>📊 Sistema de Avaliação de Alunos</strong>
-            <p>
-                Sistema completo com validação de dados, cálculo de média e classificação
-                automática do desempenho.
-            </p>
+            <strong id="p2titulo"></strong>
+            <p id="p2texto"></p>
         </div>
 
         <div class="project">
-            <strong>🧾 Sistema de Classificação por Idade</strong>
-            <p>
-                Aplicação que define permissões de acesso com base na idade do usuário.
-            </p>
+            <strong id="p3titulo"></strong>
+            <p id="p3texto"></p>
         </div>
 
-        <a class="btn" href="https://github.com/devserafimvitor-cloud/Tarefa-fora-da-aula" target="_blank">
-            Ver projetos no GitHub
-        </a>
+        <a class="btn" id="btnGithub" href="https://github.com/devserafimvitor-cloud/Tarefa-fora-da-aula" target="_blank"></a>
     </div>
 
-    <div class="card contact">
-        <h2>📞 Contato</h2>
-        <a href="https://wa.me/5565992998850" target="_blank">📱 WhatsApp</a>
-        <a href="mailto:devserafimvitor@gmail.com">📧 Email</a>
-        <a href="https://instagram.com/vitorserafim27" target="_blank">📸 Instagram</a>
+    <div class="card">
+        <h2 id="contatoTitulo">Contato</h2>
+
+        <p>📱 WhatsApp: 
+        <a href="https://wa.me/5565992998850" target="_blank">WhatsApp</a></p>
+
+        <p>📧 Email: 
+        <a href="mailto:devserafimvitor@gmail.com">Email</a></p>
+
+        <p>📸 Instagram: 
+        <a href="https://instagram.com/vitorserafim27" target="_blank">Instagram</a></p>
     </div>
 
 </div>
 
 <footer>
-    <p>© 2026 Vitor Serafim</p>
+<p>© 2026 Vitor Serafim</p>
 </footer>
+
+<script>
+function trocarIdioma(idioma) {
+
+const textos = {
+pt: {
+bioTitulo: "Biografia",
+bioTexto: "Desenvolvedor focado em C# e .NET, com experiência em criação de aplicações com validação de dados e estrutura organizada.",
+objTitulo: "Objetivos",
+objTexto: "Evoluir continuamente como desenvolvedor e atuar profissionalmente na área de tecnologia.",
+projTitulo: "Projetos",
+p1titulo: "✈️ Sistema de Controle de Voo",
+p1texto: "Simulação de controle de aeronaves com análise de dados e decisões automáticas.",
+p2titulo: "📊 Sistema de Avaliação de Alunos",
+p2texto: "Sistema com validação de notas, cálculo de média e classificação.",
+p3titulo: "🧾 Sistema de Classificação por Idade",
+p3texto: "Classificação de usuários baseada em idade.",
+btnGithub: "Ver projetos no GitHub",
+contatoTitulo: "Contato"
+},
+
+en: {
+bioTitulo: "Biography",
+bioTexto: "Developer focused on C# and .NET, building applications with data validation and structured logic.",
+objTitulo: "Goals",
+objTexto: "Continuously grow as a developer and work professionally in technology.",
+projTitulo: "Projects",
+p1titulo: "✈️ Flight Control System",
+p1texto: "Aircraft control simulation using data analysis and automated decisions.",
+p2titulo: "📊 Student Evaluation System",
+p2texto: "System with input validation, average calculation and classification.",
+p3titulo: "🧾 Age Classification System",
+p3texto: "User classification based on age.",
+btnGithub: "View projects on GitHub",
+contatoTitulo: "Contact"
+},
+
+es: {
+bioTitulo: "Biografía",
+bioTexto: "Desarrollador enfocado en C# y .NET, creando aplicaciones con validación de datos y lógica estructurada.",
+objTitulo: "Objetivos",
+objTexto: "Evolucionar como desarrollador y trabajar profesionalmente en tecnología.",
+projTitulo: "Proyectos",
+p1titulo: "✈️ Sistema de Control de Vuelo",
+p1texto: "Simulación de control de aeronaves con decisiones automáticas.",
+p2titulo: "📊 Sistema de Evaluación de Alumnos",
+p2texto: "Sistema con validación de datos y cálculo de promedio.",
+p3titulo: "🧾 Sistema de Clasificación por Edad",
+p3texto: "Clasificación de usuarios basada en edad.",
+btnGithub: "Ver proyectos en GitHub",
+contatoTitulo: "Contacto"
+}
+};
+
+const t = textos[idioma];
+
+for (let key in t) {
+    document.getElementById(key).innerText = t[key];
+}
+}
+
+// inicia em português
+trocarIdioma("pt");
+</script>
 
 </body>
 </html>
