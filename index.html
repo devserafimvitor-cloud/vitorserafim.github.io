@@ -3,77 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vitor Serafim | Desenvolvedor C#</title>
+<title>Vitor Serafim | Desenvolvedor</title>
 
 <style>
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background: #0f172a;
-    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b1120;
+    color: #e2e8f0;
 }
 
 header {
+    padding: 80px 20px;
     text-align: center;
-    padding: 50px;
-    background: linear-gradient(90deg, #0ea5e9, #22c55e);
+    background: radial-gradient(circle at top, #1e3a8a, #020617);
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
 header p {
-    margin-top: 10px;
     font-size: 18px;
+    color: #94a3b8;
 }
 
-section {
-    max-width: 1000px;
+.container {
+    max-width: 1100px;
     margin: auto;
-    padding: 30px;
+    padding: 40px 20px;
+}
+
+.section-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
 }
 
 .card {
-    background: #1e293b;
-    padding: 25px;
+    background: #020617;
+    border: 1px solid #1e293b;
     border-radius: 12px;
-    margin-bottom: 25px;
+    padding: 25px;
+    margin-bottom: 20px;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    border-color: #3b82f6;
+    transform: translateY(-3px);
 }
 
-h2 {
-    color: #38bdf8;
-    margin-bottom: 10px;
+.project {
+    margin-bottom: 20px;
 }
 
-a {
-    color: #22c55e;
-    text-decoration: none;
-    font-weight: bold;
+.project h3 {
+    margin-bottom: 5px;
 }
 
-a:hover {
-    text-decoration: underline;
+.project p {
+    color: #94a3b8;
+    line-height: 1.5;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #22c55e;
-    border-radius: 8px;
-    color: #000;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #2563eb;
+}
+
+.contact a {
+    display: block;
+    margin: 8px 0;
+    color: #3b82f6;
+    text-decoration: none;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background: #020617;
+    color: #64748b;
 }
 </style>
 </head>
@@ -85,65 +106,66 @@ footer {
     <p>Desenvolvedor C# | .NET | Backend</p>
 </header>
 
-<section>
+<div class="container">
 
-<div class="card">
-<h2>👨‍💻 Sobre mim</h2>
-<p>
-Desenvolvedor com foco em C# e .NET, criando aplicações com validação de dados,
-tratamento de entrada do usuário e estruturas condicionais bem definidas.
-Experiência no desenvolvimento de sistemas organizados, seguros e funcionais,
-simulando cenários reais de uso.
-</p>
+    <div>
+        <h2 class="section-title">Sobre</h2>
+        <div class="card">
+            <p>
+                Desenvolvedor focado em C# e .NET, com experiência na criação de aplicações
+                estruturadas, validação de dados e desenvolvimento de sistemas baseados em
+                regras condicionais. Atua na construção de soluções organizadas, seguras
+                e com foco em funcionamento real.
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="section-title">Projetos</h2>
+
+        <div class="card project">
+            <h3>✈️ Sistema de Controle de Voo</h3>
+            <p>
+                Simulação de controle de aeronaves baseada em altitude e velocidade,
+                aplicando validações e decisões automáticas para garantir segurança
+                durante o pouso.
+            </p>
+        </div>
+
+        <div class="card project">
+            <h3>📊 Sistema de Avaliação de Alunos</h3>
+            <p>
+                Sistema completo para entrada de notas, validação, cálculo de média e
+                classificação automática do desempenho, utilizando regras condicionais.
+            </p>
+        </div>
+
+        <div class="card project">
+            <h3>🧾 Sistema de Classificação por Idade</h3>
+            <p>
+                Aplicação para classificação de usuários com base em idade, determinando
+                permissões e restrições de acesso conforme critérios definidos.
+            </p>
+        </div>
+
+        <a class="btn" href="https://github.com/devserafimvitor-cloud/Tarefa-fora-da-aula" target="_blank">
+            Ver projetos no GitHub
+        </a>
+    </div>
+
+    <div>
+        <h2 class="section-title">Contato</h2>
+        <div class="card contact">
+            <a href="https://wa.me/5565992998850" target="_blank">📱 WhatsApp</a>
+            <a href="mailto:devserafimvitor@gmail.com">📧 Email</a>
+            <a href="https://instagram.com/vitorserafim27" target="_blank">📸 Instagram</a>
+        </div>
+    </div>
+
 </div>
-
-<div class="card">
-<h2>🚀 Projetos</h2>
-
-<p><strong>✈️ Sistema de Controle de Voo</strong></p>
-<p>
-Aplicação que simula o controle de aproximação de aeronaves, analisando altitude
-e velocidade para garantir condições seguras de pouso. Implementa validações e
-respostas automáticas baseadas nos dados informados pelo usuário.
-</p>
-
-<p><strong>📊 Sistema de Avaliação de Alunos</strong></p>
-<p>
-Sistema desenvolvido para processamento de notas com validação completa de entrada,
-cálculo de média e classificação automática do aluno. Utiliza estruturas condicionais
-para determinar diferentes resultados com base no desempenho.
-</p>
-
-<p><strong>🧾 Sistema de Classificação por Idade</strong></p>
-<p>
-Aplicação que classifica usuários com base na idade, definindo permissões de acesso
-de acordo com regras estabelecidas. Focado em organização lógica e tomada de decisão.
-</p>
-
-<a class="btn" href="https://github.com/devserafimvitor-cloud/Tarefa-fora-da-aula" target="_blank">
-🔗 Ver Projetos no GitHub
-</a>
-
-</div>
-
-<div class="card">
-<h2>📞 Contato</h2>
-
-<p>📱 WhatsApp: 
-<a href="https://wa.me/5565992998850" target="_blank">Falar comigo</a></p>
-
-<p>📧 Email: 
-<a href="mailto:devserafimvitor@gmail.com">devserafimvitor@gmail.com</a></p>
-
-<p>📸 Instagram: 
-<a href="https://instagram.com/vitorserafim27" target="_blank">@vitorserafim27</a></p>
-
-</div>
-
-</section>
 
 <footer>
-<p>© 2026 - Vitor Serafim</p>
+    <p>© 2026 Vitor Serafim</p>
 </footer>
 
 </body>
