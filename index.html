@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -65,22 +66,6 @@ h2 {
     color: #3b82f6;
 }
 
-/* BOTÃO */
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: #3b82f6;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background: #2563eb;
-}
-
 /* CONTATO */
 .contact-buttons {
     display: flex;
@@ -117,8 +102,8 @@ footer {
 <body>
 
 <header>
-    <h1 id="titulo">Vitor Serafim</h1>
-    <p id="subtitulo">Desenvolvedor C# | .NET | Backend</p>
+    <h1>Vitor Serafim</h1>
+    <p>Desenvolvedor C# | .NET | Backend</p>
 
     <div class="lang-box">
         <select onchange="trocarIdioma(this.value)">
@@ -146,24 +131,6 @@ footer {
     </div>
 
     <div class="card">
-        <h2 id="projTitulo"></h2>
-
-        <p><strong id="p1titulo"></strong></p>
-        <p id="p1texto"></p>
-
-        <p><strong id="p2titulo"></strong></p>
-        <p id="p2texto"></p>
-
-        <p><strong id="p3titulo"></strong></p>
-        <p id="p3texto"></p>
-
-          <p><strong id="p4titulo"></strong></p>
-        <p id="p4texto"></p>
-
-        <a class="btn" id="btnGithub" href="https://github.com/devserafimvitor-cloud/Tarefa-fora-da-aula" target="_blank"></a>
-    </div>
-
-    <div class="card">
         <h2 id="contatoTitulo"></h2>
 
         <div class="contact-buttons">
@@ -176,7 +143,7 @@ footer {
 </div>
 
 <footer>
-<p>© 2026 Vitor Serafim</p>
+    <p>© 2026 Vitor Serafim</p>
 </footer>
 
 <script>
@@ -185,53 +152,27 @@ function trocarIdioma(idioma) {
 const textos = {
 
 pt: {
-bioTitulo: "Biografia",
-bioTexto: "Desenvolvedor especializado em C# e .NET, com foco na construção de aplicações estruturadas, validação de dados e implementação de soluções eficientes. Experiência no desenvolvimento de sistemas organizados, com atenção à qualidade do código, segurança e consistência das informações.",
-objTitulo: "Objetivos",
-objTexto: "Atuar profissionalmente como desenvolvedor, contribuindo com soluções robustas e evoluindo continuamente em tecnologias backend e desenvolvimento full stack.",
-projTitulo: "Projetos",
-p1titulo: "✈️ Sistema de Controle de Voo",
-p1texto: "Aplicação que simula o controle de aeronaves com análise de variáveis críticas e decisões automatizadas.",
-p2titulo: "📊 Sistema de Avaliação de Alunos",
-p2texto: "Sistema completo com validação de dados, cálculo de média e classificação automática.",
-p3titulo: "🧾 Sistema de Classificação por Idade",
-p3texto: "Aplicação que define permissões com base na idade do usuário.",
-p4titulo: "🧾 Sistema De Cadastro e Login.",
-p4texto: "Cria um sistema aonde o usuário pode criar um cadasto e depois frazer um login",
-btnGithub: "Ver projetos no GitHub",
-contatoTitulo: "Contato"
+    bioTitulo: "Biografia",
+    bioTexto: "Desenvolvedor especializado em C# e .NET, com foco na construção de aplicações estruturadas, validação de dados e implementação de soluções eficientes. Experiência no desenvolvimento de sistemas organizados, com atenção à qualidade do código, segurança e consistência das informações.",
+    objTitulo: "Objetivos",
+    objTexto: "Atuar profissionalmente como desenvolvedor, contribuindo com soluções robustas e evoluindo continuamente em tecnologias backend e desenvolvimento full stack.",
+    contatoTitulo: "Contato"
 },
 
 en: {
-bioTitulo: "Biography",
-bioTexto: "Developer specialized in C# and .NET, focused on building structured applications, data validation, and efficient solutions. Experience in developing organized systems with attention to code quality, security, and consistency.",
-objTitulo: "Goals",
-objTexto: "Work professionally as a developer, contributing with robust solutions and continuously evolving in backend and full stack technologies.",
-projTitulo: "Projects",
-p1titulo: "✈️ Flight Control System",
-p1texto: "Application that simulates aircraft control with automated decision-making.",
-p2titulo: "📊 Student Evaluation System",
-p2texto: "System with data validation, average calculation and classification.",
-p3titulo: "🧾 Age Classification System",
-p3texto: "Application that defines permissions based on age.",
-btnGithub: "View projects on GitHub",
-contatoTitulo: "Contact"
+    bioTitulo: "Biography",
+    bioTexto: "Developer specialized in C# and .NET, focused on building structured applications, data validation, and efficient solutions. Experience in developing organized systems with attention to code quality, security, and consistency.",
+    objTitulo: "Goals",
+    objTexto: "Work professionally as a developer, contributing with robust solutions and continuously evolving in backend and full stack technologies.",
+    contatoTitulo: "Contact"
 },
 
 es: {
-bioTitulo: "Biografía",
-bioTexto: "Desarrollador especializado en C# y .NET, enfocado en la construcción de aplicaciones estructuradas, validación de datos y soluciones eficientes.",
-objTitulo: "Objetivos",
-objTexto: "Actuar profesionalmente como desarrollador y evolucionar continuamente.",
-projTitulo: "Proyectos",
-p1titulo: "✈️ Sistema de Control de Vuelo",
-p1texto: "Simulación de control de aeronaves con decisiones automáticas.",
-p2titulo: "📊 Sistema de Evaluación de Alumnos",
-p2texto: "Sistema con validación y cálculo de promedio.",
-p3titulo: "🧾 Sistema de Clasificación por Edad",
-p3texto: "Clasificación basada en edad.",
-btnGithub: "Ver proyectos en GitHub",
-contatoTitulo: "Contacto"
+    bioTitulo: "Biografía",
+    bioTexto: "Desarrollador especializado en C# y .NET, enfocado en la construcción de aplicaciones estructuradas, validación de datos y soluciones eficientes.",
+    objTitulo: "Objetivos",
+    objTexto: "Actuar profesionalmente como desarrollador y evolucionar continuamente.",
+    contatoTitulo: "Contacto"
 }
 
 };
@@ -248,3 +189,4 @@ trocarIdioma("pt");
 
 </body>
 </html>
+```
