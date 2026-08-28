@@ -166,6 +166,26 @@ h2 {
     background: #3b82f6;
     color: white;
 }
+    .projetos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-github {
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    background: #24292e;
+    border: 1px solid #3b82f6;
+    transition: 0.3s;
+}
+
+.btn-github:hover {
+    transform: translateY(-2px);
+}
 
 /* FOOTER */
 footer {
@@ -245,7 +265,7 @@ footer {
 </div>
 
 <footer>
-    <p> <p>© 2026 Vitor Serafim | Desenvolvedor de Software</p></p>
+    <p>© 2026 Vitor Serafim | Desenvolvedor de Software</p>
 </footer>
 
 <script>
@@ -278,6 +298,28 @@ es: {
 }
 
 };
+    <div class="card projetos">
+
+    <div class="projetos-header">
+        <h2>Projetos</h2>
+
+        <a href="https://github.com/SEU_USUARIO"
+           target="_blank"
+           class="btn-github">
+           💻 Ver GitHub
+        </a>
+    </div>
+
+    <p><strong>Calculadora .NET MAUI</strong></p>
+    <p>Aplicativo de calculadora desenvolvido em C#.</p>
+
+    <p><strong>Sistema de Gestão de Vendas</strong></p>
+    <p>Sistema web em ASP.NET Core MVC.</p>
+
+    <p><strong>The Líder</strong></p>
+    <p>Jogo de simulação política em Unity.</p>
+
+</div>
 
 const t = textos[idioma];
 
