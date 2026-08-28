@@ -63,6 +63,45 @@ header {
 .btn-contato:hover {
     background: #3b82f6;
 }
+    .contato-menu {
+    position: relative;
+}
+
+.btn-contato {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #3b82f6;
+    background: #020617;
+    color: white;
+    cursor: pointer;
+}
+
+.contato-opcoes {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    min-width: 180px;
+
+    background: #020617;
+    border: 1px solid #3b82f6;
+    border-radius: 6px;
+}
+
+.contato-opcoes a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.contato-opcoes a:hover {
+    background: #3b82f6;
+}
+
+.contato-menu:hover .contato-opcoes {
+    display: block;
+}
 
 select {
     padding: 8px 12px;
