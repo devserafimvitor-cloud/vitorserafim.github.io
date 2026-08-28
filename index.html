@@ -20,13 +20,15 @@ header {
     text-align: center;
     background: radial-gradient(circle at top, #1e3a8a, #020617);
 }
-    .profile-header {
+
+.profile-header {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
-    .perfil {
+
+.perfil {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -34,10 +36,14 @@ header {
     border: 4px solid #3b82f6;
     margin-bottom: 20px;
 }
-    .info{
-        text-align: left;
-    }
-    .lang-box {
+
+.info {
+    text-align: left;
+}
+
+/* IDIOMA E CONTATO */
+
+.lang-box {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -47,23 +53,7 @@ header {
     gap: 10px;
 }
 
-.btn-contato {
-    padding: 8px 12px;
-    border-radius: 6px;
-    text-decoration: none;
-
-    background: #020617;
-    color: #fff;
-
-    border: 1px solid #3b82f6;
-
-    transition: 0.3s;
-}
-
-.btn-contato:hover {
-    background: #3b82f6;
-}
-    .contato-menu {
+.contato-menu {
     position: relative;
 }
 
@@ -74,6 +64,11 @@ header {
     background: #020617;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-contato:hover {
+    background: #3b82f6;
 }
 
 .contato-opcoes {
@@ -86,6 +81,7 @@ header {
     background: #020617;
     border: 1px solid #3b82f6;
     border-radius: 6px;
+    z-index: 1000;
 }
 
 .contato-opcoes a {
@@ -106,14 +102,13 @@ header {
 select {
     padding: 8px 12px;
     border-radius: 6px;
-    border: none;
     background: #020617;
     color: #fff;
     border: 1px solid #3b82f6;
     cursor: pointer;
 }
+    /* CONTAINER */
 
-/* CONTAINER */
 .container {
     max-width: 1100px;
     margin: auto;
@@ -127,12 +122,14 @@ select {
 }
 
 /* CARDS */
+
 .card {
     background: #020617;
     border: 1px solid #1e293b;
     border-radius: 12px;
     padding: 25px;
     transition: 0.3s;
+    margin-bottom: 20px;
 }
 
 .card:hover {
@@ -144,7 +141,8 @@ h2 {
     color: #3b82f6;
 }
 
-/* CONTATO */
+/* CONTATOS */
+
 .contact-buttons {
     display: flex;
     flex-direction: column;
@@ -166,7 +164,10 @@ h2 {
     background: #3b82f6;
     color: white;
 }
-    .projetos-header {
+
+/* PROJETOS */
+
+.projetos-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -188,6 +189,7 @@ h2 {
 }
 
 /* FOOTER */
+
 footer {
     text-align: center;
     padding: 30px;
@@ -196,44 +198,67 @@ footer {
 }
 </style>
 </head>
-
-<body>
+    <body>
 
 <header>
-  <div class="profile-header">
 
-    <img src="foto.jpeg" alt="Vitor Serafim" class="perfil">
+    <div class="profile-header">
 
-    <div class="info">
-        <h1>Vitor Serafim</h1>
-        <p>Desenvolvedor C# | ASP.NET Core MVC | .NET MAUI | HTML | CSS | SQL Server</p>
-    </div>
+        <img src="foto.jpeg"
+             alt="Vitor Serafim"
+             class="perfil">
 
-</div>
+        <div class="info">
+            <h1>Vitor Serafim</h1>
 
-  <div class="lang-box">
-
-  <div class="contato-menu">
-
-        <button class="btn-contato">
-            📞 Contato
-        </button>
-
-        <div class="contato-opcoes">
-            <a href="https://wa.me/5565992998850" target="_blank">📱 WhatsApp</a>
-            <a href="mailto:devserafimvitor@gmail.com">📧 Email</a>
-            <a href="https://instagram.com/vitormserafim27" target="_blank">📸 Instagram</a>
+            <p>
+                Desenvolvedor C# |
+                ASP.NET Core MVC |
+                .NET MAUI |
+                HTML |
+                CSS |
+                SQL Server
+            </p>
         </div>
 
     </div>
 
-    <select onchange="trocarIdioma(this.value)">
-        <option value="pt">🇧🇷 Português</option>
-        <option value="en">🇺🇸 English</option>
-        <option value="es">🇪🇸 Español</option>
-    </select>
+    <div class="lang-box">
 
-</div>
+        <div class="contato-menu">
+
+            <button class="btn-contato">
+                📞 Contato
+            </button>
+
+            <div class="contato-opcoes">
+
+                <a href="https://wa.me/5565992998850"
+                   target="_blank">
+                   📱 WhatsApp
+                </a>
+
+                <a href="mailto:devserafimvitor@gmail.com">
+                   📧 Email
+                </a>
+
+                <a href="https://instagram.com/vitormserafim27"
+                   target="_blank">
+                   📸 Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+        <select onchange="trocarIdioma(this.value)">
+            <option value="pt">🇧🇷 Português</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="es">🇪🇸 Español</option>
+        </select>
+
+    </div>
+
 </header>
 
 <div class="container">
@@ -251,15 +276,66 @@ footer {
         </div>
 
     </div>
+        <div class="card">
+
+        <div class="projetos-header">
+
+            <h2>Projetos</h2>
+
+            <a href="https://github.com/SEU_USUARIO"
+               target="_blank"
+               class="btn-github">
+                💻 Ver GitHub
+            </a>
+
+        </div>
+
+        <h3>🧮 Calculadora .NET MAUI</h3>
+        <p>
+            Aplicativo de calculadora desenvolvido em C#
+            utilizando .NET MAUI.
+        </p>
+
+        <hr>
+
+        <h3>🏪 Sistema de Gestão de Vendas</h3>
+        <p>
+            Sistema para gerenciamento de clientes,
+            produtos e vendas.
+        </p>
+
+        <hr>
+
+        <h3>🎮 The Líder</h3>
+        <p>
+            Jogo de simulação política desenvolvido
+            em Unity e C#.
+        </p>
+
+    </div>
 
     <div class="card">
+
         <h2 id="contatoTitulo"></h2>
 
         <div class="contact-buttons">
-            <a href="https://wa.me/5565992998850" target="_blank">📱 WhatsApp</a>
-            <a href="mailto:devserafimvitor@gmail.com">📧 Email</a>
-            <a href="https://instagram.com/vitormserafim27" target="_blank">📸 Instagram</a>
+
+            <a href="https://wa.me/5565992998850"
+               target="_blank">
+               📱 WhatsApp
+            </a>
+
+            <a href="mailto:devserafimvitor@gmail.com">
+               📧 Email
+            </a>
+
+            <a href="https://instagram.com/vitormserafim27"
+               target="_blank">
+               📸 Instagram
+            </a>
+
         </div>
+
     </div>
 
 </div>
@@ -267,68 +343,64 @@ footer {
 <footer>
     <p>© 2026 Vitor Serafim | Desenvolvedor de Software</p>
 </footer>
+        <script>
 
-<script>
 function trocarIdioma(idioma) {
 
 const textos = {
 
 pt: {
     bioTitulo: "Biografia",
+
     bioTexto: "Desenvolvedor de software com experiência em C#, .NET, ASP.NET Core MVC, .NET MAUI, HTML, CSS e Bootstrap. Atua no desenvolvimento de aplicações web e mobile, com foco em código limpo, boas práticas de desenvolvimento, validação de dados e criação de soluções eficientes. Comprometido com aprendizado contínuo e com a entrega de software de qualidade.",
+
     objTitulo: "Objetivos",
+
     objTexto: "Atuar no desenvolvimento de software, contribuindo com soluções tecnológicas eficientes, seguras e de alta qualidade. Busco aplicar meus conhecimentos em C#, .NET, desenvolvimento web e mobile para criar aplicações que gerem valor aos usuários e às organizações, além de evoluir continuamente minhas habilidades técnicas e profissionais por meio de novos desafios e projetos.",
+
     contatoTitulo: "Contato"
 },
 
 en: {
     bioTitulo: "Biography",
-    bioTexto: "Software developer with experience in C#, .NET, ASP.NET Core MVC, .NET MAUI, HTML, CSS, and Bootstrap. Works on developing web and mobile applications, focusing on clean code, good development practices, data validation, and creating efficient solutions. Committed to continuous learning and delivering high-quality software.",
+
+    bioTexto: "Software developer with experience in C#, .NET, ASP.NET Core MVC, .NET MAUI, HTML, CSS and Bootstrap. Works on developing web and mobile applications, focusing on clean code, good development practices, data validation and creating efficient solutions. Committed to continuous learning and delivering high-quality software.",
+
     objTitulo: "Goals",
-    objTexto: "To work in software development, contributing with efficient, secure, and high-quality technological solutions. I seek to apply my knowledge in C#, .NET, web and mobile development to create applications that generate value for users and organizations, in addition to continuously evolving my technical and professional skills through new challenges and projects.",
+
+    objTexto: "To work in software development, contributing with efficient, secure and high-quality technological solutions. I seek to apply my knowledge in C#, .NET, web and mobile development to create applications that generate value for users and organizations while continuously improving my technical and professional skills.",
+
     contatoTitulo: "Contact"
 },
 
 es: {
     bioTitulo: "Biografía",
-    bioTexto: "Desarrollador de software con experiencia en C#, .NET, ASP.NET Core MVC, .NET MAUI, HTML, CSS y Bootstrap. Se especializa en el desarrollo de aplicaciones web y móviles, priorizando la limpieza del código, las buenas prácticas de desarrollo, la validación de datos y la creación de soluciones eficientes. Comprometido con el aprendizaje continuo y la entrega de software de alta calidad.",
+
+    bioTexto: "Desarrollador de software con experiencia en C#, .NET, ASP.NET Core MVC, .NET MAUI, HTML, CSS y Bootstrap. Se especializa en el desarrollo de aplicaciones web y móviles, priorizando la limpieza del código, las buenas prácticas de desarrollo, la validación de datos y la creación de soluciones eficientes.",
+
     objTitulo: "Objetivos",
-    objTexto: "Mi objetivo es trabajar en el desarrollo de software, aportando soluciones tecnológicas eficientes, seguras y de alta calidad. Busco aplicar mis conocimientos en C#, .NET, desarrollo web y móvil para crear aplicaciones que generen valor para usuarios y organizaciones, además de perfeccionar continuamente mis habilidades técnicas y profesionales mediante nuevos retos y proyectos.",
+
+    objTexto: "Mi objetivo es trabajar en el desarrollo de software, aportando soluciones tecnológicas eficientes, seguras y de alta calidad. Busco aplicar mis conocimientos en C#, .NET, desarrollo web y móvil para crear aplicaciones que generen valor para usuarios y organizaciones.",
+
     contatoTitulo: "Contacto"
 }
 
 };
-    <div class="card projetos">
-
-    <div class="projetos-header">
-        <h2>Projetos</h2>
-
-        <a href="https://github.com/SEU_USUARIO"
-           target="_blank"
-           class="btn-github">
-           💻 Ver GitHub
-        </a>
-    </div>
-
-    <p><strong>Calculadora .NET MAUI</strong></p>
-    <p>Aplicativo de calculadora desenvolvido em C#.</p>
-
-    <p><strong>Sistema de Gestão de Vendas</strong></p>
-    <p>Sistema web em ASP.NET Core MVC.</p>
-
-    <p><strong>The Líder</strong></p>
-    <p>Jogo de simulação política em Unity.</p>
-
-</div>
 
 const t = textos[idioma];
 
 for (let key in t) {
-    document.getElementById(key).innerText = t[key];
+    const elemento = document.getElementById(key);
+
+    if (elemento) {
+        elemento.innerText = t[key];
+    }
 }
+
 }
 
 trocarIdioma("pt");
+
 </script>
 
 </body>
